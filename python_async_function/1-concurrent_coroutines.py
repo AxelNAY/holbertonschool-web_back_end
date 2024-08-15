@@ -5,10 +5,12 @@ write an async routine called wait_n that takes in 2 int arguments
 n times with the specified max_delay.'''
 import asyncio
 from typing import List
+
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
+
     delay = [wait_random(max_delay) for i in range(0, n)]
     delay_list = await asyncio.gather(*delay)
     async_list = []
