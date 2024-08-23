@@ -45,12 +45,13 @@ class Server:
         page with default value 1 and page_size with default value 10.'''
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
+
         start_index, end_index = index_range(page, page_size)
         dataset = self.dataset()
         if start_index >= len(dataset):
             return []
         return dataset[start_index:end_index]
-    
+
     def get_hyper(self, page: int = 1, page_size: int = 10):
         '''Returns a dictionary containing the following key-value pairs:
         page_size: the length of the returned dataset page
