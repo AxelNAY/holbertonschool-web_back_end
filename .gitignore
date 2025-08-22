@@ -1,0 +1,4 @@
+a.db
+a.db-journal
+**/__pycache__/
+MySQL_Advanced/names.sql
