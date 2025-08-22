@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d00b8e04852f8ddd6cc14cb6c57560d302e71c87280ab92255294139aa2b87a4
-size 304
+-- Show and add orders
+SELECT * FROM items;
+SELECT * FROM orders;
+
+INSERT INTO orders (item_name, number) VALUES ('apple', 1);
+INSERT INTO orders (item_name, number) VALUES ('apple', 3);
+INSERT INTO orders (item_name, number) VALUES ('pear', 2);
+
+SELECT "--";
+
+SELECT * FROM items;
+SELECT * FROM orders;

@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c59f327b31120538311088b84f1808cad2a52548499bd668362840be7a58a547
-size 475
+-- Initial
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE IF NOT EXISTS users (
+    id int not null AUTO_INCREMENT,
+    email varchar(255) not null,
+    name varchar(255),
+    valid_email boolean not null default 0,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO users (email, name) VALUES ("bob@dylan.com", "Bob");
+INSERT INTO users (email, name, valid_email) VALUES ("sylvie@dylan.com", "Sylvie", 1);
+INSERT INTO users (email, name, valid_email) VALUES ("jeanne@dylan.com", "Jeanne", 1);

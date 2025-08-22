@@ -1,3 +1,3 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c3866aa165f174aa5465b82d275e3bce4d5a11ab1c21fecd0ff398a326eb50ef
-size 270
+-- Script that lists all bands with Glam rock as their main style, ranked by their longevity
+SELECT band_name, (COALESCE(NULLIF(`split`, 0), 2025) - `formed`) AS lifespan FROM metal_bands
+WHERE `style` LIKE '%Glam rock%' AND `formed` IS NOT NULL ORDER BY lifespan DESC;

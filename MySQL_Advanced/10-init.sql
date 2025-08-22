@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aaa089cefec75f467293afc7adc761b78ff14009da3cb0595d07554634d0782d
-size 377
+-- Initial
+DROP TABLE IF EXISTS numbers;
+
+CREATE TABLE IF NOT EXISTS numbers (
+    a int default 0,
+    b int default 0
+);
+
+INSERT INTO numbers (a, b) VALUES (10, 2);
+INSERT INTO numbers (a, b) VALUES (4, 5);
+INSERT INTO numbers (a, b) VALUES (2, 3);
+INSERT INTO numbers (a, b) VALUES (6, 3);
+INSERT INTO numbers (a, b) VALUES (7, 0);
+INSERT INTO numbers (a, b) VALUES (6, 8);

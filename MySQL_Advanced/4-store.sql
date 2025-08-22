@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e40b6daa9acfcd72ee78e13af91e20d78cc6b5350491bfdc29da6d601ea1d3d5
-size 357
+-- Script that creates a trigger that decreases the quantity of an item after adding a new order.
+DROP TRIGGER IF EXISTS decrease_quantity_after_insert;
+
+DELIMITER $$
+
+CREATE TRIGGER decrease_quantity_after_insert AFTER INSERT ON orders
+    FOR EACH ROW BEGIN UPDATE items SET quantity = quantity - NEW.number WHERE name = NEW.item_name;
+END$$
+
+DELIMITER ;

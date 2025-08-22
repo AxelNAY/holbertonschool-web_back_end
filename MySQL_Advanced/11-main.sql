@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c2079356350577cab97769055770a4ff2110e7948d98b6788c965b68c71cb9dd
-size 568
+-- Test view
+SELECT * FROM need_meeting;
+
+SELECT "--";
+
+UPDATE students SET score = 40 WHERE name = 'Bob';
+SELECT * FROM need_meeting;
+
+SELECT "--";
+
+UPDATE students SET score = 80 WHERE name = 'Steeve';
+SELECT * FROM need_meeting;
+
+SELECT "--";
+
+UPDATE students SET last_meeting = CURDATE() WHERE name = 'Jean';
+SELECT * FROM need_meeting;
+
+SELECT "--";
+
+UPDATE students SET last_meeting = ADDDATE(CURDATE(), INTERVAL -2 MONTH) WHERE name = 'Jean';
+SELECT * FROM need_meeting;
+
+SELECT "--";
+
+SHOW CREATE TABLE need_meeting;
+
+SELECT "--";
+
+SHOW CREATE TABLE students;

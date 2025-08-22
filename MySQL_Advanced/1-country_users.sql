@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1874a1b2d80a272b56108978bf1c55f9ccdf4005dee38d6450abbd5f1ce40216
-size 266
+-- Script of creation of a table users if not exist with a country field
+CREATE TABLE IF NOT EXISTS users (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    name VARCHAR(255),
+    country ENUM('US', 'CO', 'TN') NOT NULL
+);

@@ -1,3 +1,3 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aba59be6208d6b7e8164c5a7e359a544c436f5cc6f0515f00f727a089c57459a
-size 153
+-- 3 first students in the Batch ID=3
+-- because Batch 3 is the best!
+SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;

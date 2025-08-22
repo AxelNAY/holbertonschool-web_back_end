@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ecb75fb304a36e1eb216257dca29fd484384d727eb5736b83514106eb1709e09
-size 210
+-- Show and compute average score
+SELECT * FROM users;
+SELECT * FROM corrections;
+
+SELECT "--";
+CALL ComputeAverageScoreForUser((SELECT id FROM users WHERE name = "Jeanne"));
+
+SELECT "--";
+SELECT * FROM users;
