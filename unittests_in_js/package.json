@@ -1,10 +1,11 @@
 {
   "scripts": {
-    "test": "mocha ${FILE:-'**/*.test.js'}",
-    "test:all": "mocha"
+    "test": "mocha"
   },
   "dependencies": {
-    "@sinonjs/referee-sinon": "^12.0.0",
-    "mocha": "^11.7.1"
+    "mocha": "^8.4.0"
+  },
+  "devDependencies": {
+    "@sinonjs/referee-sinon": "^9.0.0"
   }
 }
