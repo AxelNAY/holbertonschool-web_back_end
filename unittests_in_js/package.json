@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "mocha ${FILE:-'**/*.test.js'}",
+    "test:all": "mocha"
+  },
+  "dependencies": {
+    "mocha": "^8.4.0"
+  }
+}
