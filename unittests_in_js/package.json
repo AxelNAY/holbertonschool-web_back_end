@@ -4,6 +4,6 @@
     "test:all": "mocha"
   },
   "dependencies": {
-    "mocha": "^8.4.0"
+    "mocha": "^11.7.1"
   }
 }
