@@ -4,6 +4,7 @@
     "test:all": "mocha"
   },
   "dependencies": {
+    "@sinonjs/referee-sinon": "^12.0.0",
     "mocha": "^11.7.1"
   }
 }
