@@ -6,6 +6,7 @@
     "mocha": "^8.4.0"
   },
   "devDependencies": {
-    "@sinonjs/referee-sinon": "^9.0.0"
+    "@sinonjs/referee-sinon": "^9.0.0",
+    "chai": "^6.0.1"
   }
 }
